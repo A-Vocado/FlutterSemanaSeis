@@ -2,9 +2,9 @@
 
 Conforme estudado na semana o desafio proposto é o seguinte: 
 
-![imagem-01.png](./imagem-01.png)
+![imagem-01.png](https://gitlab.com/raro-academy-flutter-edicao-02/aulas/-/raw/main/06-reatividade2/imagem-01.png)
 
-![imagem-02.png](./imagem-02.png)
+![imagem-02.png](https://gitlab.com/raro-academy-flutter-edicao-02/aulas/-/raw/main/06-reatividade2/imagem-02.png)
 
 Criar uma aplicacao Flutter onde tenha uma Home Page e nela uma Lista de Objeto PessoaModel retornada.
 
