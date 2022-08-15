@@ -1,16 +1,38 @@
 # listagem_de_usuarios
 
-A new Flutter project.
+Conforme estudado na semana o desafio proposto é o seguinte: 
 
-## Getting Started
+![imagem-01.png](./imagem-01.png)
 
-This project is a starting point for a Flutter application.
+![imagem-02.png](./imagem-02.png)
 
-A few resources to get you started if this is your first Flutter project:
+Criar uma aplicacao Flutter onde tenha uma Home Page e nela uma Lista de Objeto PessoaModel retornada.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Objeto Pessoa deve conter como propriedades : nome, sobrenome, idade, nacionalidade, profissao.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Projeto deve ter classes abstratas com os contratos a serem seguidos por quem for implementar.
+
+Exemplo do que precisa conter : 
+
+## HomePage - Page no Flutter para exibir lista.
+    Ao entrar na HomePage simular um tempo de 5 segundos para entao trazer a listagem de pessoas.
+
+    HomeController - Classe que vai ser chamada para acionar o repositório responsavel por trazer a lista de pessoas.
+ 
+## Interfaces
+
+    IHomeRepository - definicao de contrato do que deve ser retornado por quem implementar
+
+    IHttpClient - definicao de contrato do que deve ser retornado por quem implementar
+ 
+## Models
+
+    PessoaModel - Objeto que precisa ser retornado
+
+## Repositories
+
+    HomeRepository - Repositório responsavel por retornar a lista de pessoas (chama o HttpClient)
+ 
+## Shared
+
+    HttpClient - Classe que simula a busca em uma API externa.
