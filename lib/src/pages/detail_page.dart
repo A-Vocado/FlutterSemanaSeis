@@ -12,13 +12,26 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       appBar: ZAppBar(titleText: pokemon.name!),
       body: Padding(
-        padding: const EdgeInsets.all(12),
+        padding: const EdgeInsets.all(36),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Image.network(pokemon.img!),
-            Text(pokemon.height!),
-            Text(pokemon.weight!),
+            Table(
+              children: [
+                TableRow(children: [
+                  Image.network(pokemon.img!),
+                ]),
+                TableRow(children: [
+                  Text(pokemon.height!),
+                ]),
+                TableRow(children: [
+                  Text(pokemon.weight!),
+                ]),
+                const TableRow(children: [
+                  Text('Não consegui terminar essa página a tempo'),
+                ]),
+              ],
+            ),
           ],
         ),
       ),

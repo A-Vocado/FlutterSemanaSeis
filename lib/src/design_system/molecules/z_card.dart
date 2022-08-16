@@ -46,7 +46,9 @@ class ZCard extends StatelessWidget {
             ),
           ),
           onTap: () {
-            Navigator.push(context, route!);
+            Future.delayed(Duration.zero, () {
+              Navigator.push(context, route!);
+            });
           },
         ));
   }
