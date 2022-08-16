@@ -3,7 +3,6 @@ import 'package:listagem_de_usuarios/model/pokemon_model.dart';
 import 'package:listagem_de_usuarios/pages/home_controller.dart';
 import 'package:listagem_de_usuarios/repositories/home_repository.dart';
 import 'package:listagem_de_usuarios/shared/http_client.dart';
-import 'package:listagem_de_usuarios/store/pokemon_api_store.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -46,10 +45,9 @@ class _HomePageState extends State<HomePage> {
                         padding: const EdgeInsets.all(8),
                         child: Column(
                           children: [
-                            Text(snapshot.data![index].num!),
                             Text(snapshot.data![index].name!),
+                            Text(snapshot.data![index].num!),
                             // Text(snapshot.data![index].type!),
-                            Text(snapshot.data![index].img!),
                           ],
                         ),
                       ),

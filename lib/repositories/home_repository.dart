@@ -13,7 +13,7 @@ class HomeRepository implements InterfaceHomeRepository {
 
     if (response != null) {
       for (var pokemon in response) {
-        pokemon.add(PokemonModel.fromJson(pokemon));
+        pokemons.add(PokemonModel.fromJson(pokemon));
       }
     }
     return pokemons;
