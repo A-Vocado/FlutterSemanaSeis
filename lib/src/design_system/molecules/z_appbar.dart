@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:listagem_de_usuarios/design_system/atoms/text/z_text_h2.dart';
+import 'package:listagem_de_usuarios/src/design_system/atoms/text/z_text_h2.dart';
 
 class ZAppBar extends PreferredSize {
   ZAppBar({Key? key, required this.titleText, this.actions})

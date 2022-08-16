@@ -1,4 +1,4 @@
-import 'package:listagem_de_usuarios/interfaces/http_client_interface.dart';
+import 'package:listagem_de_usuarios/src/interfaces/http_client_interface.dart';
 
 class HttpClient implements InterfaceHttpClient {
   @override
