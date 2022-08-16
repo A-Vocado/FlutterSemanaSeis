@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:listagem_de_usuarios/design_system/molecules/z_appbar.dart';
+import 'package:listagem_de_usuarios/design_system/molecules/z_card.dart';
 import 'package:listagem_de_usuarios/model/pokemon_model.dart';
 import 'package:listagem_de_usuarios/pages/home_controller.dart';
 import 'package:listagem_de_usuarios/repositories/home_repository.dart';
@@ -27,8 +29,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Pokedex'),
+      appBar: ZAppBar(
+        titleText: 'Pokedex',
       ),
       body: Center(
         child: FutureBuilder<List<PokemonModel>>(
@@ -38,20 +40,10 @@ class _HomePageState extends State<HomePage> {
               return ListView.builder(
                 itemCount: snapshot.data!.length,
                 itemBuilder: (context, index) {
-                  return Column(
-                    children: [
-                      if (index > 0) const Divider(thickness: 2),
-                      Padding(
-                        padding: const EdgeInsets.all(8),
-                        child: Column(
-                          children: [
-                            Text(snapshot.data![index].name!),
-                            Text(snapshot.data![index].num!),
-                            // Text(snapshot.data![index].type!),
-                          ],
-                        ),
-                      ),
-                    ],
+                  return ZCard(
+                    name: snapshot.data![index].name!,
+                    number: snapshot.data![index].num!,
+                    icon: snapshot.data![index].img!,
                   );
                 },
               );
